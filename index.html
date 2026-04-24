@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stock & Tell — Presentation 2026</title>
+<meta name="description" content="Stock & Tell: Turning Fragmented Equity Research into One Coherent Workflow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- CURSOR -->
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+
+<!-- PROGRESS -->
+<div id="progress-bar" style="width:0%"></div>
+
+<!-- ── NAV ───────────────────────────────── -->
+<nav>
+  <a href="https://stockandtell.schon.au" class="nav-logo" target="_blank">
+    <div class="nav-logo-mark">ST</div>
+    <span class="nav-logo-text">Stock &amp; Tell</span>
+  </a>
+  <div class="nav-slides" id="nav-slides"></div>
+  <div class="nav-right">
+    <div class="nav-counter">
+      SLIDE <span id="nav-current">01</span> / <span id="nav-total">14</span>
+    </div>
+    <a href="https://stockandtell.schon.au" class="nav-live" target="_blank">
+      <div class="nav-live-dot"></div>
+      Live site
+    </a>
+  </div>
+</nav>
+
+<!-- ── TICKER ─────────────────────────────── -->
+<div id="ticker">
+  <div class="ticker-track" id="ticker-track"></div>
+</div>
+
+<!-- ============================================================
+     SLIDES
+     ============================================================ -->
+
+<!-- S1: TITLE -->
+<section id="s1">
+  <div class="bg-grid"></div>
+  <div class="bg-radial"></div>
+  <div class="slide-inner stagger">
+    <div class="slide-num">01 — Title</div>
+    <div class="title-tagline">Equity Research, Unified</div>
+    <h1>
+      <span class="glitch-wrap" data-text="Stock">Stock</span><br>
+      <span class="accent">&amp;</span> Tell<span class="accent">.</span>
+    </h1>
+    <p class="subtitle">
+      A unified equity research platform that combines market data, news, and explainable summaries into a single company brief.
+    </p>
+    <div class="code-block">
+      <span class="kw">await</span> fetch(<span class="str">'https://collectionservice.schon.au/v1/company-brief'</span>, {<br>
+      &nbsp;&nbsp;method: <span class="str">'POST'</span>,<br>
+      &nbsp;&nbsp;body: JSON.stringify({ ticker: <span class="str">'AAPL'</span> })<br>
+      }); <span class="cmt">// → structured company brief in one request</span>
+    </div>
+    <div class="team-info">
+      <div><div class="team-label">Platform</div><div class="team-val">stockandtell.schon.au</div></div>
+      <div><div class="team-label">Type</div><div class="team-val">Equity Research Platform</div></div>
+      <div><div class="team-label">Year</div><div class="team-val">2026</div></div>
+    </div>
+  </div>
+  <div class="scroll-hint">
+    <span>Scroll or use arrow keys</span>
+    <div class="arrow"></div>
+  </div>
+  <div class="sep"></div>
+</section>
+
+<!-- S2: PROBLEM -->
+<section id="s2">
+  <div class="bg-grid"></div>
+  <div class="slide-inner stagger">
+    <div class="slide-num">02 — Problem</div>
+    <h2>Why Equity Research<br>Is Still <span class="accent">Fragmented</span></h2>
+    <p class="subtitle">Users currently juggle multiple disconnected tools — creating wasted time, cognitive overload, and a higher barrier for beginners.</p>
+    <ul class="problem-list">
+      <li><div class="icon">1</div>Financial dashboards for numbers</li>
+      <li><div class="icon">2</div>News websites for context</li>
+      <li><div class="icon">3</div>Notes apps and spreadsheets for watchlists</li>
+      <li><div class="icon">4</div>Separate tools for interpretation</li>
+      <li><div class="icon">!</div><strong style="color:var(--white)">The problem is not lack of information — it is lack of integration and context.</strong></li>
+    </ul>
+  </div>
+  <div class="sep"></div>
+</section>
+
+<!-- S3: SOLUTION -->
+<section id="s3">
+  <div class="bg-grid"></div>
+  <div class="slide-inner stagger">
+    <div class="slide-num">03 — Solution</div>
+    <h2>Our Solution:<br><span class="accent">Stock &amp; Tell</span></h2>
+    <p class="subtitle">One search. One brief. Everything in one place.</p>
+    <div class="card-grid cols-2">
+      <div class="card">
+        <div class="card-label">Input</div>
+        <div class="card-title">Search a company</div>
+        <div class="card-body">User enters any company name or ticker to trigger the research pipeline.</div>
+      </div>
+      <div class="card">
+        <div class="card-label">Retrieval</div>
+        <div class="card-title">Market &amp; news data</div>
+        <div class="card-body">Platform pulls live market/financial data alongside recent relevant news articles.</div>
+      </div>
+      <div class="card">
+        <div class="card-label">Output</div>
+        <div class="card-title">Structured company brief</div>
+        <div class="card-body">A clean, readable summary combining numbers with business context — not just raw data.</div>
+      </div>
+      <div class="card">
+        <div class="card-label">Persistence</div>
+        <div class="card-title">Save, revisit, export</div>
+        <div class="card-body">Save to collections and watchlists. Revisit previous analyses. Export as JSON or CSV.</div>
+      </div>
+    </div>
+    <p style="font-size:0.7rem;color:var(--muted);margin-top:1.5rem;border-left:2px solid var(--green-border);padding-left:1rem;">
+      Stock &amp; Tell is an investment support tool — not an automated decision-maker.
+    </p>
+  </div>
+  <div class="sep"></div>
+</section>
+
+<!-- S4: VALUE PROP -->
+<section id="s4">
+  <div class="bg-grid"></div>
+  <div class="slide-inner stagger">
+    <div class="slide-num">04 — Value Proposition</div>
+    <h2>Why This Platform<br>Is Worth <span class="accent">Using</span></h2>
+    <div class="value-cols">
+      <div class="value-col">
+        <div class="value-num">01</div>
+        <div class="value-title">Faster Research</div>
+        <div class="value-body">Eliminates manual switching between tools. One search surfaces everything you need.</div>
+      </div>
+      <div class="value-col">
+        <div class="value-num">02</div>
+        <div class="value-title">Clearer Understanding</div>
+        <div class="value-body">Numbers alone don't tell the story. We combine financials with business and news context.</div>
+      </div>
+      <div class="value-col">
+        <div class="value-num">03</div>
+        <div class="value-title">More Trustworthy</div>
+        <div class="value-body">Source metadata, stored raw and processed data, and full traceability throughout.</div>
+      </div>
+    </div>
+    <div class="pitch-statement">
+      Stock &amp; Tell reduces effort while preserving clarity, usefulness, and trust.
+    </div>
+  </div>
+  <div class="sep"></div>
+</section>
+
+<!-- S5: USERS -->
+<section id="s5">
+  <div class="bg-grid"></div>
+  <div class="slide-inner stagger">
+    <div class="slide-num">05 — Target Users</div>
+    <h2>Who We Built<br>This <span class="accent">For</span></h2>
+    <p class="subtitle">Our strongest audience is people who want an accessible and reliable starting point — not expert traders.</p>
+    <div class="card-grid cols-3">
+      <div class="card">
+        <div class="card-label">Primary</div>
+        <div class="card-title">Beginner investors</div>
+        <div class="card-body">New to equity research, overwhelmed by scattered tools and jargon-heavy data.</div>
+      </div>
+      <div class="card">
+        <div class="card-label">Primary</div>
+        <div class="card-title">Students</div>
+        <div class="card-body">Learning finance and markets, needing a coherent starting point for research.</div>
+      </div>
+      <div class="card">
+        <div class="card-label">Primary</div>
+        <div class="card-title">Casual followers</div>
+        <div class="card-body">Market observers who want context without dedicating hours to research.</div>
+      </div>
+    </div>
+    <div style="margin-top:1.5rem;padding:1.2rem 1.5rem;border:1px solid rgba(0,200,150,0.14);background:var(--green-dim);">
+      <div class="card-label" style="margin-bottom:0.35rem">Also valuable</div>
+      <div class="card-body">Experienced users who want a faster first-pass workflow before deeper analysis.</div>
+    </div>
+  </div>
+  <div class="sep"></div>
+</section>
+
+<!-- S6: USER JOURNEY -->
+<section id="s6">
+  <div class="bg-grid"></div>
+  <div class="slide-inner stagger">
+    <div class="slide-num">06 — Core User Journey</div>
+    <h2>How a User Uses<br><span class="accent">Stock &amp; Tell</span></h2>
+    <p class="subtitle">A four-step workflow designed to be frictionless from first search to saved insight.</p>
+    <div class="flow">
+      <div class="flow-step">
+        <div class="flow-num">STEP 01</div>
+        <div class="flow-title">Search</div>
+        <div class="flow-body">Enter a company name or ticker symbol into the search bar.</div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-num">STEP 02</div>
+        <div class="flow-title">Receive</div>
+        <div class="flow-body">View a structured company brief combining market data and relevant news.</div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-num">STEP 03</div>
+        <div class="flow-title">Save</div>
+        <div class="flow-body">Save the brief to a named collection. Group collections into watchlists.</div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-num">STEP 04</div>
+        <div class="flow-title">Revisit</div>
+        <div class="flow-body">Return to saved analyses or rerun for fresh data. Cached retrieval improves speed.</div>
+      </div>
+    </div>
+  </div>
+  <div class="sep"></div>
+</section>
+
+<!-- S7: PLATFORM VALUE -->
+<section id="s7">
+  <div class="bg-grid"></div>
+  <div class="slide-inner stagger">
+    <div class="slide-num">07 — Platform Value</div>
+    <h2>From Microservice Platform<br>to <span class="accent">End-User Product</span></h2>
+    <p class="subtitle">Our product is built on reusable microservices — a real platform, not a monolith.</p>
+    <div class="card-grid cols-3">
+      <div class="card">
+        <div class="card-label">Service 01</div>
+        <div class="card-title">User Service</div>
+        <div class="card-body">Handles authentication, API key management, and session control across the platform.</div>
+      </div>
+      <div class="card">
+        <div class="card-label">Service 02</div>
+        <div class="card-title">Collection Service</div>
+        <div class="card-body">Collects, structures, stores, and exports company data. The core data engine.</div>
+      </div>
+      <div class="card">
+        <div class="card-label">Service 03</div>
+        <div class="card-title">Prediction Service</div>
+        <div class="card-body">Planned analytical extension for forward-looking insights. Architected for future growth.</div>
+      </div>
+    </div>
+    <div class="stat-row" style="margin-top:1.5rem">
+      <div class="stat">
+        <span class="stat-val" data-count="3" data-suffix="">3</span>
+        <div class="stat-label">Core services</div>
+      </div>
+      <div class="stat">
+        <span class="stat-val">∞</span>
+        <div class="stat-label">Loose coupling</div>
+      </div>
+      <div class="stat">
+        <span class="stat-val">↑</span>
+        <div class="stat-label">Future-ready</div>
+      </div>
+    </div>
+  </div>
+  <div class="sep"></div>
+</section>
+
+<!-- S8: ARCHITECTURE -->
+<section id="s8">
+  <div class="bg-grid"></div>
+  <div class="slide-inner stagger">
+    <div class="slide-num">08 — Architecture</div>
+    <h2>System <span class="accent">Architecture</span></h2>
+    <p class="subtitle">Separated concerns — each service evolves independently while contributing to one coherent product.</p>
+    <div class="arch">
+      <div class="arch-row">
+        <div class="arch-label">Frontend</div>
+        <div class="arch-items">
+          <span class="tag">Next.js</span>
+          <span class="tag">React</span>
+          <span class="tag gray">TypeScript</span>
+        </div>
+      </div>
+      <div class="arch-row">
+        <div class="arch-label">Backend</div>
+        <div class="arch-items">
+          <span class="tag">FastAPI</span>
+          <span class="tag gray">Python</span>
+          <span class="tag gray">Microservices</span>
+          <span class="tag gray">REST</span>
+        </div>
+      </div>
+      <div class="arch-row">
+        <div class="arch-label">Auth / DB</div>
+        <div class="arch-items">
+          <span class="tag">Supabase</span>
+          <span class="tag">Supabase Auth</span>
+          <span class="tag gray">PostgreSQL</span>
+        </div>
+      </div>
+      <div class="arch-row">
+        <div class="arch-label">Background</div>
+        <div class="arch-items">
+          <span class="tag">Redis</span>
+          <span class="tag">Upstash</span>
+          <span class="tag gray">Workflow queues</span>
+        </div>
+      </div>
+      <div class="arch-row">
+        <div class="arch-label">Deployment</div>
+        <div class="arch-items">
+          <span class="tag">Vercel</span>
+          <span class="tag">Cloudflare</span>
+          <span class="tag gray">Dev / Staging / Prod</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sep"></div>
+</section>
+
+<!-- S9: INTEROPERABILITY -->
+<section id="s9">
+  <div class="bg-grid"></div>
+  <div class="slide-inner stagger">
+    <div class="slide-num">09 — Interoperability</div>
+    <h2>Designed for Reuse<br>Across the <span class="accent">Ecosystem</span></h2>
+    <p class="subtitle">Our services aren't tied to one frontend — they're built to be consumed by other teams and systems.</p>
+    <div class="card-grid cols-2">
+      <div class="card">
+        <div class="card-label">API Design</div>
+        <div class="card-title">RESTful &amp; documented</div>
+        <div class="card-body">OpenAPI / Swagger documentation. JWT + API key authentication. Structured JSON responses.</div>
+      </div>
+      <div class="card">
+        <div class="card-label">Data Standards</div>
+        <div class="card-title">ADAGE-compatible exports</div>
+        <div class="card-body">Structured exports that feed dashboards, pipelines, or future ML systems. No data lock-in.</div>
+      </div>
+      <div class="card">
+        <div class="card-label">For Other Teams</div>
+        <div class="card-title">Consumable outputs</div>
+        <div class="card-body">Other teams can consume our collection service. Reduces duplicated data collection logic.</div>
+      </div>
+      <div class="card">
+        <div class="card-label">Why It Matters</div>
+        <div class="card-title">Platform, not a silo</div>
+        <div class="card-body">Reusable backend capability with loose coupling — the difference between a product and a platform.</div>
+      </div>
+    </div>
+  </div>
+  <div class="sep"></div>
+</section>
+
+<!-- S10: TESTING -->
+<section id="s10">
+  <div class="bg-grid"></div>
+  <div class="slide-inner stagger">
+    <div class="slide-num">10 — Technical Quality</div>
+    <h2>Reliability, Testing<br>&amp; <span class="accent">Deployment</span></h2>
+    <p class="subtitle">A production-grade delivery pipeline from first commit to live environment.</p>
+    <div class="card-grid cols-3">
+      <div class="card">
+        <div class="card-label">Testing</div>
+        <div class="card-title">Full test coverage</div>
+        <div class="card-body">Unit, API/route, integration, contract, end-to-end, and smoke testing across all services.</div>
+      </div>
+      <div class="card">
+        <div class="card-label">Deployment</div>
+        <div class="card-title">Three environments</div>
+        <div class="card-body">Development → Staging → Production pipeline ensures confidence before every release.</div>
+      </div>
+      <div class="card">
+        <div class="card-label">Reliability</div>
+        <div class="card-title">Built for resilience</div>
+        <div class="card-body">Caching, structured error handling, fallback strategies, monitoring, and logs throughout.</div>
+      </div>
+    </div>
+  </div>
+  <div class="sep"></div>
+</section>
+
+<!-- S11: DEMO -->
+<section id="s11">
+  <div class="bg-grid"></div>
+  <div class="slide-inner stagger">
+    <div class="slide-num">11 — Live Demo</div>
+    <h2><span class="accent">Live Demonstration</span><br>Stock &amp; Tell in Action</h2>
+    <p class="subtitle">A working prototype deployed in the ecosystem. Here's what we'll walk through.</p>
+    <div class="flow" style="grid-template-columns:repeat(5,1fr)">
+      <div class="flow-step">
+        <div class="flow-num">01</div>
+        <div class="flow-title">Login</div>
+        <div class="flow-body">Auth via Supabase. API key management.</div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-num">02</div>
+        <div class="flow-title">Search</div>
+        <div class="flow-body">Enter a company ticker or name.</div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-num">03</div>
+        <div class="flow-title">Brief</div>
+        <div class="flow-body">Review the structured company brief output.</div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-num">04</div>
+        <div class="flow-title">Save</div>
+        <div class="flow-body">Watchlist and collection save flow.</div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-num">05</div>
+        <div class="flow-title">API</div>
+        <div class="flow-body">Swagger endpoint or JSON/CSV export.</div>
+      </div>
+    </div>
+    <div style="margin-top:2rem;padding:1.4rem 1.5rem;border:1px solid var(--green-border);background:var(--green-dim);text-align:center;">
+      <div class="card-label" style="margin-bottom:0.45rem">Now switching to the live product</div>
+      <a href="https://stockandtell.schon.au" target="_blank"
+         style="font-family:var(--display);font-size:1.35rem;font-weight:700;color:var(--green);text-decoration:none;">
+        → stockandtell.schon.au
+      </a>
+    </div>
+  </div>
+  <div class="sep"></div>
+</section>
+
+<!-- S12: CHALLENGES -->
+<section id="s12">
+  <div class="bg-grid"></div>
+  <div class="slide-inner stagger">
+    <div class="slide-num">12 — Challenges</div>
+    <h2>Challenges We Faced<br>&amp; How We <span class="accent">Responded</span></h2>
+    <table class="challenge-table">
+      <thead>
+        <tr><th>Challenge</th><th>Our Response</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>External API reliability</td>
+          <td>Fallback handling, caching, and response validation throughout the collection pipeline.</td>
+        </tr>
+        <tr>
+          <td>Rate limiting</td>
+          <td>Throttling strategies and reduced redundant API calls via intelligent caching.</td>
+        </tr>
+        <tr>
+          <td>Maintaining interoperability</td>
+          <td>Standardised schemas, public OpenAPI docs, and consistent data contracts.</td>
+        </tr>
+        <tr>
+          <td>Deployment confidence</td>
+          <td>Staged environment pipeline (dev → staging → prod) with full test coverage at each stage.</td>
+        </tr>
+        <tr>
+          <td>Prediction service scope</td>
+          <td>Kept the core product strong. Prediction is framed honestly as a planned future extension.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="sep"></div>
+</section>
+
+<!-- S13: REFLECTION -->
+<section id="s13">
+  <div class="bg-grid"></div>
+  <div class="slide-inner stagger">
+    <div class="slide-num">13 — Team Reflection</div>
+    <h2>What We Learned<br>as a <span class="accent">Team</span></h2>
+    <p class="subtitle">Moving from backend platform to user-facing product taught us as much about product thinking as it did about engineering.</p>
+    <ul class="reflection-list">
+      <li>Learned how to move from a backend platform to a user-facing product with real business value.</li>
+      <li>Improved our design for interoperability — thinking about what other teams need, not just our own frontend.</li>
+      <li>Balanced commercial viability with technical feasibility throughout sprint planning.</li>
+      <li>Deepened understanding of deployment pipelines, testing strategies, and microservice boundaries in production.</li>
+    </ul>
+  </div>
+  <div class="sep"></div>
+</section>
+
+<!-- S14: FINAL PITCH -->
+<section id="s14">
+  <div class="bg-grid"></div>
+  <div class="bg-radial"></div>
+  <div class="slide-inner stagger">
+    <div class="slide-num">14 — Final Pitch</div>
+    <h2>Why <span class="accent">Stock &amp; Tell</span><br>Is Investable</h2>
+    <div class="stat-row">
+      <div class="stat">
+        <span class="stat-val" style="font-size:1.05rem;line-height:1.45">Real problem</span>
+        <div class="stat-label">Equity research is fragmented</div>
+      </div>
+      <div class="stat">
+        <span class="stat-val" style="font-size:1.05rem;line-height:1.45">Clear solution</span>
+        <div class="stat-label">One coherent workflow</div>
+      </div>
+      <div class="stat">
+        <span class="stat-val" style="font-size:1.05rem;line-height:1.45">Strong foundation</span>
+        <div class="stat-label">Scalable microservice architecture</div>
+      </div>
+    </div>
+    <div class="final-line">
+      Stock &amp; Tell turns <strong>scattered research</strong> into a
+      <strong>faster, clearer, and more trustworthy</strong> starting point for equity research.
+    </div>
+    <div class="cta-bar">
+      <button class="cta">Thank You</button>
+      <button class="cta outline">Questions?</button>
+    </div>
+    <div class="divider"></div>
+    <div style="font-size:0.62rem;color:var(--muted);letter-spacing:0.1em;">
+      STOCK &amp; TELL — 2026 — stockandtell.schon.au
+    </div>
+  </div>
+</section>
+
+<script src="js/main.js"></script>
+</body>
+</html>
